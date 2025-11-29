@@ -549,14 +549,14 @@ export const courseContent = [
             <p><strong>Flow:</strong> Input $\\rightarrow$ CPU $\\rightarrow$ Output.</p>
           </div>
 
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Von_Neumann_Architecture.svg" alt="Von Neumann Architecture" class="w-full rounded-lg shadow-md mb-4 bg-white p-2" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Von_Neumann_Architecture.svg" alt="Von Neumann Architecture" class="w-3/4 mx-auto block rounded-lg shadow-md mb-4 bg-white p-2" />
         `
       },
       {
         title: 'Central Processing Unit (CPU)',
         content: `
           <p>The "brain" of the computer.</p>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/CPU_block_diagram.svg" alt="CPU Internals" class="w-full rounded-lg shadow-md mb-4 bg-white p-2" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/CPU_block_diagram.svg" alt="CPU Internals" class="w-3/4 mx-auto block rounded-lg shadow-md mb-4 bg-white p-2" />
 
           <div class="formula-card">
             <h4>Components</h4>
@@ -602,7 +602,7 @@ export const courseContent = [
       {
         title: 'Memory Organization',
         content: `
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Computer_Memory_Hierarchy.svg" alt="Memory Hierarchy" class="w-full rounded-lg shadow-md mb-4 bg-white p-2" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/ComputerMemoryHierarchy.svg" alt="Memory Hierarchy" class="w-3/4 mx-auto block rounded-lg shadow-md mb-4 bg-white p-2" />
           
           <div class="formula-card">
             <h4>Memory Hierarchy</h4>
@@ -655,7 +655,7 @@ export const courseContent = [
       {
         title: 'Secondary Storage',
         content: `
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Hard_disk-en.svg" alt="Hard Disk Structure" class="w-full rounded-lg shadow-md mb-4 bg-white p-2" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Hard_drive-en.svg" alt="Hard Disk Structure" class="w-3/4 mx-auto block rounded-lg shadow-md mb-4 bg-white p-2" />
 
           <div class="formula-card">
             <h4>Storage Types</h4>
@@ -681,7 +681,7 @@ export const courseContent = [
         title: 'Number Systems',
         content: `
           <p>Computers strictly use binary, but humans use decimal. You must master the four key systems.</p>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Hexadecimal_multiplication_table.svg" alt="Hexadecimal Chart" class="w-full rounded-lg shadow-md mb-4 bg-white p-2" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Hexadecimal_multiplication_table.svg" alt="Hexadecimal Chart" class="w-3/4 mx-auto block rounded-lg shadow-md mb-4 bg-white p-2" />
           
           <div class="formula-card">
             <h4>Key Systems</h4>
@@ -735,14 +735,14 @@ export const courseContent = [
       {
         title: 'Signed Numbers',
         content: `
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Binary_2%27s_Complement.svg" alt="2's Complement Visualization" class="w-full rounded-lg shadow-md mb-4 bg-white p-2" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Twos_complement_circle.svg" alt="2's Complement Visualization" class="w-3/4 mx-auto block rounded-lg shadow-md mb-4 bg-white p-2" />
         `
       },
       {
         title: 'Binary Addition',
         content: `
           <p>Operates like decimal addition, but carry over when sum reaches 2.</p>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Binary_Counter_Visualization.svg" alt="Binary Counter" class="w-full rounded-lg shadow-md mb-4 bg-white p-2" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Binary_Addition.svg" alt="Binary Counter" class="w-3/4 mx-auto block rounded-lg shadow-md mb-4 bg-white p-2" />
 
           <div class="formula-card">
             <h4>The 4 Rules</h4>
@@ -821,7 +821,7 @@ export const courseContent = [
         title: '2\'s Complement Arithmetic',
         content: `
           <p><strong>Formula:</strong> $A - B = A + (\\text{2's Comp of } B)$</p>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Binary_overflow_check.svg" alt="Overflow Logic" class="w-full rounded-lg shadow-md mb-4 bg-white p-2" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Integer_overflow.svg" alt="Overflow Logic" class="w-3/4 mx-auto block rounded-lg shadow-md mb-4 bg-white p-2" />
 
           <div class="example-card">
             <h4>Case 1: Positive Result ($7 - 5$)</h4>
@@ -864,7 +864,7 @@ export const courseContent = [
         title: 'IEEE 754 Standard (32-bit)',
         content: `
           <p>You <strong>must memorize</strong> the breakdown:</p>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Float_example.svg" alt="32-bit Float Structure" class="w-full rounded-lg shadow-md mb-4 bg-white p-2" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/IEEE_754_Single_Floating_Point_Format.svg" alt="32-bit Float Structure" class="w-3/4 mx-auto block rounded-lg shadow-md mb-4 bg-white p-2" />
 
           <div class="formula-card">
             <h4>Components</h4>
@@ -948,7 +948,7 @@ export const courseContent = [
       {
         title: 'Logic Gates',
         content: `
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Logic-gate-index.png" alt="Logic Gates Summary" class="w-full rounded-lg shadow-md mb-4 bg-white p-2" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Logic-gate-index.png" alt="Logic Gates Summary" class="w-3/4 mx-auto block rounded-lg shadow-md mb-4 bg-white p-2" />
 
           <div class="formula-card">
             <h4>Basic Gates</h4>
@@ -1016,11 +1016,11 @@ export const courseContent = [
           <div class="grid grid-cols-2 gap-4">
             <div>
                 <p class="text-center font-bold">AND ($A \\cap B$)</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Venn0001.svg" alt="Venn AND" class="w-full rounded-lg shadow-md bg-white p-2" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Intersection_of_sets_A_and_B.svg" alt="Venn AND" class="w-3/4 mx-auto block rounded-lg shadow-md bg-white p-2" />
             </div>
             <div>
                 <p class="text-center font-bold">OR ($A \\cup B$)</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Venn0111.svg" alt="Venn OR" class="w-full rounded-lg shadow-md bg-white p-2" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Union_of_sets_A_and_B.svg" alt="Venn OR" class="w-3/4 mx-auto block rounded-lg shadow-md bg-white p-2" />
             </div>
           </div>
         `
@@ -1065,13 +1065,13 @@ export const courseContent = [
       {
         title: 'Buses & Interrupts',
         content: `
-    < div class="formula-card" >
+    <div class="formula-card">
             <h4>Buses</h4>
             <ul>
                 <li><strong>Data Bus:</strong> Bidirectional (Data moves both ways).</li>
                 <li><strong>Address Bus:</strong> Unidirectional (CPU tells memory "where" to look).</li>
             </ul>
-          </div >
+          </div>
     <div class="formula-card">
       <h4>Interrupts</h4>
       <p>Signal to CPU to stop current work.</p>
@@ -1094,20 +1094,20 @@ export const courseContent = [
       {
         title: 'Pointers & Arrays',
         content: `
-    < div class="example-card" >
+    <div class="example-card">
             <h4>Pointers</h4>
             <p>Variable that stores the address of another variable.</p>
             <p><code>int *p;</code> (Declaration)</p>
             <p><code>&a</code> (Address of a)</p>
             <p><code>*p</code> (Value at address)</p>
             <p><strong>Pointer Arithmetic:</strong> If p is at 1000, p+1 is at 1004 (for 4-byte int).</p>
-          </div >
+          </div>
     `
       },
       {
         title: 'Data Structures',
         content: `
-    < img src = "/assets/computer-concepts/linked_list_vs_array_1764406110995.png" alt = "Linked List vs Array Diagram" class="w-full rounded-lg shadow-md mb-4" />
+    <img src="https://miro.medium.com/v2/resize:fit:1200/1*UJSgX_5Z9AudmKfq0HOEow.png" alt="Linked List vs Array Diagram" class="w-3/4 mx-auto block rounded-lg shadow-md mb-4" />
       <ul>
         <li><strong>Stack:</strong> LIFO (Last In, First Out). Push/Pop.</li>
         <li><strong>Queue:</strong> FIFO (First In, First Out). Enqueue/Dequeue.</li>
@@ -1144,7 +1144,7 @@ export const courseContent = [
         title: 'Process Management',
         content: `
           <p>A <strong>Process</strong> is a program in execution.</p>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Process_states.svg" alt="Process State Diagram" class="w-full rounded-lg shadow-md mb-4 bg-white p-2" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Process_states.svg" alt="Process State Diagram" class="w-3/4 mx-auto block rounded-lg shadow-md mb-4 bg-white p-2" />
 
           <div class="formula-card">
             <h4>Process States</h4>
@@ -1172,7 +1172,7 @@ export const courseContent = [
         title: 'Deadlocks',
         content: `
           <p>Processes stuck waiting for each other forever.</p>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Deadlock_at_a_junction.svg" alt="Deadlock Visual" class="w-full rounded-lg shadow-md mb-4 bg-white p-2" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Deadlock_at_a_junction.svg" alt="Deadlock Visual" class="w-3/4 mx-auto block rounded-lg shadow-md mb-4 bg-white p-2" />
 
           <div class="formula-card">
             <h4>4 Necessary Conditions</h4>
