@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X, GraduationCap, BookOpen } from 'lucide-react';
 import { courseContent } from '../data/courseContent';
 
 const Layout = () => {
@@ -10,7 +10,8 @@ const Layout = () => {
 
     // Group modules for the sidebar
     const coreMath = courseContent.filter(m => ['algebra', 'coordinate-geometry', 'trigonometry', 'differential-equations'].includes(m.id));
-    const appliedMath = courseContent.filter(m => !['algebra', 'coordinate-geometry', 'trigonometry', 'differential-equations'].includes(m.id));
+    const appliedMath = courseContent.filter(m => ['probability', 'sets', 'quantitative', 'mensuration'].includes(m.id));
+    const computerConcepts = courseContent.filter(m => ['computer-basics', 'data-representation', 'binary-arithmetic', 'floating-point', 'boolean-algebra', 'computer-architecture', 'c-programming', 'operating-systems', 'mock-test'].includes(m.id));
 
     return (
         <div className="flex h-screen bg-white text-slate-900 font-sans">
@@ -31,6 +32,21 @@ const Layout = () => {
 
                 <nav className="flex-1 overflow-y-auto py-6 px-3 space-y-6">
                     <div>
+                        <NavLink
+                            to="/syllabus"
+                            className={({ isActive }) =>
+                                `block px-3 py-2 rounded-lg text-sm font-medium transition-colors mb-4 ${isActive
+                                    ? 'bg-indigo-50 text-indigo-700 border-l-4 border-indigo-600'
+                                    : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                                }`
+                            }
+                        >
+                            <div className="flex items-center gap-2">
+                                <BookOpen size={18} />
+                                <span>Syllabus & Marking</span>
+                            </div>
+                        </NavLink>
+
                         <h3 className="px-3 text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Core Mathematics</h3>
                         <div className="space-y-1">
                             {coreMath.map((module) => (
@@ -54,6 +70,26 @@ const Layout = () => {
                         <h3 className="px-3 text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Applied & Discrete</h3>
                         <div className="space-y-1">
                             {appliedMath.map((module) => (
+                                <NavLink
+                                    key={module.id}
+                                    to={`/topic/${module.id}`}
+                                    className={({ isActive }) =>
+                                        `block px-3 py-2 rounded-lg text-sm font-medium transition-colors ${isActive
+                                            ? 'bg-indigo-50 text-indigo-700 border-l-4 border-indigo-600'
+                                            : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                                        }`
+                                    }
+                                >
+                                    {module.title}
+                                </NavLink>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="px-3 text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Computer Concepts</h3>
+                        <div className="space-y-1">
+                            {computerConcepts.map((module) => (
                                 <NavLink
                                     key={module.id}
                                     to={`/topic/${module.id}`}
