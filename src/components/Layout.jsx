@@ -12,6 +12,7 @@ const Layout = () => {
     const coreMath = courseContent.filter(m => ['algebra', 'coordinate-geometry', 'trigonometry', 'differential-equations'].includes(m.id));
     const appliedMath = courseContent.filter(m => ['probability', 'sets', 'quantitative', 'mensuration'].includes(m.id));
     const computerConcepts = courseContent.filter(m => ['computer-basics', 'data-representation', 'binary-arithmetic', 'floating-point', 'boolean-algebra', 'computer-architecture', 'c-programming', 'operating-systems', 'mock-test'].includes(m.id));
+    const examPrep = courseContent.filter(m => ['question-bank-strategy'].includes(m.id));
 
     return (
         <div className="flex h-screen bg-white text-slate-900 font-sans">
@@ -70,6 +71,26 @@ const Layout = () => {
                         <h3 className="px-3 text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Applied & Discrete</h3>
                         <div className="space-y-1">
                             {appliedMath.map((module) => (
+                                <NavLink
+                                    key={module.id}
+                                    to={`/topic/${module.id}`}
+                                    className={({ isActive }) =>
+                                        `block px-3 py-2 rounded-lg text-sm font-medium transition-colors ${isActive
+                                            ? 'bg-indigo-50 text-indigo-700 border-l-4 border-indigo-600'
+                                            : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                                        }`
+                                    }
+                                >
+                                    {module.title}
+                                </NavLink>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="px-3 text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Exam Preparation</h3>
+                        <div className="space-y-1">
+                            {examPrep.map((module) => (
                                 <NavLink
                                     key={module.id}
                                     to={`/topic/${module.id}`}

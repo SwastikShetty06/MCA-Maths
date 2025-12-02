@@ -35,7 +35,7 @@ const TopicPage = () => {
     }
 
     return (
-        <div className="min-h-screen bg-slate-50">
+        <div className="bg-slate-50">
             {/* Masterclass Header */}
             <div className={`w-full py-16 px-8 bg-gradient-to-r ${module.color} text-white shadow-lg`}>
                 <div className="max-w-5xl mx-auto">
