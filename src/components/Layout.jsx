@@ -12,7 +12,10 @@ const Layout = () => {
     const coreMath = courseContent.filter(m => ['algebra', 'coordinate-geometry', 'trigonometry', 'differential-equations'].includes(m.id));
     const appliedMath = courseContent.filter(m => ['probability', 'sets', 'quantitative', 'mensuration'].includes(m.id));
     const computerConcepts = courseContent.filter(m => ['computer-basics', 'data-representation', 'binary-arithmetic', 'floating-point', 'boolean-algebra', 'computer-architecture', 'c-programming', 'operating-systems', 'mock-test'].includes(m.id));
-    const examPrep = courseContent.filter(m => ['question-bank-strategy'].includes(m.id));
+    const examPrep = courseContent.filter(m => [
+        'question-bank-strategy',
+        'computer-concepts-strategy'
+    ].includes(m.id));
 
     return (
         <div className="flex h-screen bg-white text-slate-900 font-sans">

@@ -15,6 +15,7 @@ import { cProgramming } from './modules/cProgramming';
 import { operatingSystems } from './modules/operatingSystems';
 import { mockTest } from './modules/mockTest';
 import { questionBankStrategy } from './modules/questionBankStrategy';
+import { computerConceptsStrategy } from './modules/computerConceptsStrategy';
 
 export const courseContent = [
   algebra,
@@ -33,5 +34,6 @@ export const courseContent = [
   cProgramming,
   operatingSystems,
   mockTest,
-  questionBankStrategy
+  questionBankStrategy,
+  computerConceptsStrategy
 ];
