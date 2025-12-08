@@ -4,64 +4,52 @@ export const trigonometry = {
     id: 'trigonometry',
     title: 'Trigonometry',
     icon: Layers,
-    description: 'Identities, equations, properties of triangles, height and distance, and inverse functions.',
+    description: 'Identities, compound angles, properties of triangles, heights & distances.',
     color: 'from-orange-500 to-red-500',
     topics: [
         {
-            title: 'Fundamental Identities',
+            title: 'Identities & Compound Angles',
             content: `
-        <p>Trigonometry relies on relationships between the sides of a right-angled triangle.</p>
-        
-        <div class="formula-card">
-          <h4>Reciprocal & Pythagorean Identities</h4>
-          <p class="math">$$ \\sin^2\\theta + \\cos^2\\theta = 1 $$</p>
-          <p class="math">$$ 1 + \\tan^2\\theta = \\sec^2\\theta $$</p>
-          <p>$\\sec A = 1/\\cos A$, $\\cot A = 1/\\tan A$</p>
-        </div>
-
-        <div class="formula-card">
-          <h4>Addition/Subtraction Formulas</h4>
-          <p class="math">$$ \\sin(A \\pm B) = \\sin A \\cos B \\pm \\cos A \\sin B $$</p>
-          <p class="math">$$ \\cos(A \\pm B) = \\cos A \\cos B \\mp \\sin A \\sin B $$</p>
-        </div>
-      `
+                <div class="formula-card">
+                    <h4>Fundamental Identities</h4>
+                    <p>$\\sin^2 \\theta + \\cos^2 \\theta = 1$; [cite_start]$1 + \\tan^2 \\theta = \\sec^2 \\theta$[cite: 263, 264].</p>
+                    [cite_start]<p>$\\sin(A \\pm B) = \\sin A \\cos B \\pm \\cos A \\sin B$[cite: 268].</p>
+                    [cite_start]<p>$\\cos(A \\pm B) = \\cos A \\cos B \\mp \\sin A \\sin B$[cite: 269].</p>
+                    [cite_start]<p>$\\tan(A \\pm B) = \\frac{\\tan A \\pm \\tan B}{1 \\mp \\tan A \\tan B}$[cite: 270].</p>
+                </div>
+                <div class="formula-card">
+                    <h4>Double Angle</h4>
+                    [cite_start]<p>$\\sin 2A = 2\\sin A \\cos A$[cite: 272].</p>
+                    [cite_start]<p>$\\cos 2A = \\cos^2 A - \\sin^2 A = 1 - 2\\sin^2 A$[cite: 273].</p>
+                </div>
+            `
         },
         {
-            title: 'Applications',
+            title: 'Properties of Triangles',
             content: `
-        <div class="formula-card">
-          <h4>Area of Triangle</h4>
-          <p class="math">$$ \\text{Area} = \\frac{1}{2} ab \\sin C $$</p>
-          <p class="description">Using two sides and the included angle.</p>
-        </div>
-        <p><strong>Trigonometric Equations:</strong> Equations containing one or more trigonometric ratios of unknown angles.</p>
-      `
+                <div class="formula-card">
+                    <h4>Rules</h4>
+                    [cite_start]<p><strong>Sine Rule:</strong> $\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$[cite: 277].</p>
+                    [cite_start]<p><strong>Cosine Rule:</strong> $c^2 = a^2 + b^2 - 2ab \\cos C$[cite: 278].</p>
+                    [cite_start]<p><strong>Area:</strong> $\\frac{1}{2}ab \\sin C = \\sqrt{s(s-a)(s-b)(s-c)}$[cite: 279].</p>
+                </div>
+            `
         },
         {
-            title: 'Advanced Trigonometry',
+            title: 'Inverse Functions & Equations',
             content: `
-        <div class="formula-card">
-          <h4>Solution of Triangles</h4>
-          <p><strong>Sine Rule:</strong> $$ \\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} $$</p>
-          <p><strong>Cosine Rule:</strong> $$ c^2 = a^2 + b^2 - 2ab \\cos C $$</p>
-        </div>
-
-        <div class="formula-card">
-          <h4>Inverse Trigonometric Functions</h4>
-          <ul>
-              <li>$\\sin^{-1} x$: Domain $[-1, 1]$, Range $[-\\pi/2, \\pi/2]$</li>
-              <li>$\\cos^{-1} x$: Domain $[-1, 1]$, Range $[0, \\pi]$</li>
-              <li>$\\tan^{-1} x$: Domain $\\mathbb{R}$, Range $(-\\pi/2, \\pi/2)$</li>
-          </ul>
-        </div>
-
-        <div class="example-card">
-          <h4>Heights and Distances</h4>
-          <p><strong>Angle of Elevation:</strong> Angle above the horizontal line of sight.</p>
-          <p><strong>Angle of Depression:</strong> Angle below the horizontal line of sight.</p>
-          <p>Used to calculate heights of towers, mountains, etc., using trigonometric ratios.</p>
-        </div>
-      `
+                <ul>
+                    [cite_start]<li>$\\sin^{-1} x$: Range $[-\\pi/2, \\pi/2]$[cite: 283].</li>
+                    [cite_start]<li>$\\cos^{-1} x$: Range $[0, \\pi]$[cite: 284].</li>
+                    [cite_start]<li>$\\tan^{-1} x$: Range $(-\\pi/2, \\pi/2)$[cite: 285].</li>
+                </ul>
+                <div class="example-card">
+                    <h4>Example: Solving Equation</h4>
+                    <p>Solve $\\sin 2x - \\sin x = 0$ for $0 \\le x \\le 2\\pi$.</p>
+                    <p>$2\\sin x \\cos x - \\sin x = 0 \\implies \\sin x(2\\cos x - 1) = 0$.</p>
+                    [cite_start]<p>Roots: $0, \\pi, 2\\pi, \\pi/3, 5\\pi/3$ [cite: 288-294].</p>
+                </div>
+            `
         }
     ]
 };
