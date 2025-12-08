@@ -4,85 +4,85 @@ export const sets = {
     id: 'sets',
     title: 'Sets, Relations, Functions',
     icon: Box,
-    description: 'The study of sets, relations, and functions forms the bedrock of modern mathematics. Proficiency in this module is prerequisite for mastering Probability, Calculus, and Algebra[cite: 3438, 3439, 3440].',
+    description: 'Set theory operations, relations, properties, and types of functions.',
     color: 'from-teal-500 to-cyan-500',
     topics: [
         {
-            title: 'Set Theory: Concepts and Operations',
+            title: 'Set Theory: Concepts',
             content: `
-                <h3>Definition and Representation</h3>
-                <p>A <strong>Set</strong> is formally defined as a well-defined collection of distinct objects, where the order of elements has no significance. The objects are called elements or members[cite: 3443, 3444].</p>
+                <p>A <strong>set</strong> is a well-defined collection of distinct objects.</p>
                 
-                <h4>Representation Types:</h4>
+                <h4>Representation</h4>
                 <ul>
-                    <li><strong>Roster (Tabular) Form:</strong> Elements are listed explicitly within curly braces. 
-                        <br/>Example: $V = \\{a, e, i, o, u\\}$[cite: 3445].
-                    </li>
-                    <li><strong>Set-Builder Form:</strong> Elements are defined by a characterizing property $P(x)$. 
-                        <br/>Example: $A = \\{x : x \\in \\mathbb{N}, 3 < x < 7\\}$[cite: 3446].
-                    </li>
+                    <li><strong>Roster Form:</strong> Elements listed in curly braces, e.g., $V = \\{a, e, i, o, u\\}$.</li>
+                    <li><strong>Set-Builder Form:</strong> Defined by a property, e.g., $A = \\{x : x \\in \\mathbb{N}, 3 < x < 10\\}$.</li>
                 </ul>
 
-                <h4>Types of Sets:</h4>
-                <p>Finite, Infinite, Empty (\\$\\emptyset\\$), Singleton, Equal, Equivalent, Subset ($A \\subseteq B$), and <strong>Power Set</strong>.</p>
+                <h4>Types of Sets</h4>
+                <ul>
+                    <li><strong>Null/Empty Set ($\phi$):</strong> A set with no elements.</li>
+                    <li><strong>Singleton Set:</strong> Contains exactly one element.</li>
+                    <li><strong>Power Set ($P(A)$):</strong> The set of all subsets. If $|A| = n$, then $|P(A)| = 2^n$.</li>
+                </ul>
             `
         },
         {
-            title: 'Set Operations and Inclusion-Exclusion Principle',
+            title: 'Operations & Formulas',
             content: `
-                <h3>Formulas (Inclusion-Exclusion Principle)</h3>
+                <div class="formula-card">
+                    <h4>Inclusion-Exclusion Principle</h4>
+                    <p class="math">$$ n(A \\cup B) = n(A) + n(B) - n(A \\cap B) $$</p>
+                    <p>For three sets:</p>
+                    <p class="math">$$ n(A \\cup B \\cup C) = n(A) + n(B) + n(C) - n(A \\cap B) - n(B \\cap C) - n(A \\cap C) + n(A \\cap B \\cap C) $$</p>
+                    <p class="citation"></p>
+                </div>
+
+                <h4>Set Operations</h4>
                 <ul>
-                    <li><strong>Union of two sets:</strong>
-                        $$n(A \\cup B) = n(A) + n(B) - n(A \\cap B)$$
-                    </li>
-                    <li><strong>Disjoint Sets:</strong> If $A$ and $B$ are disjoint (non-overlapping), then $n(A \\cap B) = 0$.
-                        $$n(A \\cup B) = n(A) + n(B)$$
-                    </li>
-                    <li><strong>Difference of Sets:</strong>
-                        $$n(A - B) = n(A) - n(A \\cap B)$$
-                    </li>
+                    <li><strong>Union ($A \\cup B$):</strong> Elements in A or B or both.</li>
+                    <li><strong>Intersection ($A \\cap B$):</strong> Elements common to both.</li>
+                    <li><strong>Difference ($A - B$):</strong> Elements in A but strictly not in B ($A \\cap B'$).</li>
+                    <li><strong>Symmetric Difference ($A \\Delta B$):</strong> $(A - B) \\cup (B - A)$.</li>
                 </ul>
 
-                <h3>Solved Problem: Set Operations</h3>
-                <p><strong>Problem:</strong> Given $U=\\{a..f\\}, A=\\{a,b,c\\}, B=\\{c,d,e,f\\}, C=\\{c,d,e\\}$. Find $(A \\cap B) \\cup (A \\cap C)$ and $(A - B)'$.</p>
-                <p><strong>Solution (Part 1):</strong>
-                    <ol>
-                        <li>Calculate the intersections: $A \\cap B = \\{c\\}$ and $A \\cap C = \\{c\\}$.</li>
-                        <li>Calculate the union: $(A \\cap B) \\cup (A \\cap C) = \\{c\\} \\cup \\{c\\}$.</li>
-                        <li>Result: $\\{c\\}$.
-                    </ol>
-                </p>
-                <p><strong>Solution (Part 2):</strong>
-                    <ol>
-                        <li>Calculate the difference: $A - B = \\{a, b\\}$ (elements in A not in B).</li>
-                        <li>Calculate the complement $(A - B)'$: The complement of $\\{a, b\\}$ with respect to the universal set $U=\\{a..f\\}$ is $\\{c, d, e, f\\}$.</li>
-                        <li>Result: $\\{c, d, e, f\\}$.
-                    </ol>
-                </p>
+                <h4>De Morgan's Laws</h4>
+                <p>$(A \\cup B)' = A' \\cap B'$ and $(A \\cap B)' = A' \\cup B'$.</p>
+
+                <div class="example-card">
+                    <h4>Solved Example: Survey Data</h4>
+                    <p><strong>Problem:</strong> In a survey of 100 students: 50 like Math (M), 45 like Physics (P), 40 like Chemistry (C). Intersections: $M \\cap P=15, P \\cap C=15, M \\cap C=10$, all three=5. Find how many like none.</p>
+                    <p><strong>Solution:</strong> Using Inclusion-Exclusion:</p>
+                    <p class="math">$$ n(M \\cup P \\cup C) = 50 + 45 + 40 - (15 + 15 + 10) + 5 = 100 $$</p>
+                    <p>None = Total - Union = $100 - 100 = 0$.</p>
+                </div>
             `
         },
         {
-            title: 'Relations and Types of Functions',
+            title: 'Relations & Functions',
             content: `
-                <h3>Relations</h3>
-                <p>A <strong>Relation</strong> is any subset of the Cartesian product $A \\times B$.</p>
-                <h4>Properties of Relations:</h4>
+                <h4>Relations</h4>
+                <p>A subset of Cartesian product $A \\times B$. Types on set A:</p>
                 <ul>
-                    <li><strong>Reflexive:</strong> $(a, a) \\in R$ for all $a \\in A$.</li>
-                    <li><strong>Symmetric:</strong> If $(a, b) \\in R$, then $(b, a) \\in R$.</li>
-                    <li><strong>Transitive:</strong> If $(a, b) \\in R$ and $(b, c) \\in R$, then $(a, c) \\in R$.</li>
-                    <li><strong>Equivalence Relation:</strong> A relation that is Reflexive, Symmetric, and Transitive.</li>
+                    <li><strong>Reflexive:</strong> $(a, a) \\in R$ for all $a$.</li>
+                    <li><strong>Symmetric:</strong> $(a, b) \\in R \\implies (b, a) \\in R$.</li>
+                    <li><strong>Transitive:</strong> $(a, b) \\in R, (b, c) \\in R \\implies (a, c) \\in R$.</li>
+                    <li><strong>Equivalence Relation:</strong> Reflexive, Symmetric, and Transitive.</li>
                 </ul>
 
-                <h3>Functions (Mappings)</h3>
-                <p>A function is a relation where every element in the Domain has a unique image in the Codomain.</p>
-                <h4>Types of Functions:</h4>
+                <h4>Functions</h4>
                 <ul>
-                    <li><strong>One-to-One (Injective):</strong> Distinct elements have distinct images.</li>
-                    <li><strong>Onto (Surjective):</strong> The Range of the function is equal to its Codomain.</li>
-                    <li><strong>Bijective:</strong> A function that is both One-to-One and Onto.</li>
+                    <li><strong>One-to-One (Injective):</strong> Distinct inputs yield distinct outputs.</li>
+                    <li><strong>Onto (Surjective):</strong> Range = Codomain.</li>
+                    <li><strong>Bijective:</strong> Both One-to-One and Onto (Invertible).</li>
                 </ul>
-                            `
+
+                <div class="example-card">
+                    <h4>Example: Domain and Range</h4>
+                    <p><strong>Function:</strong> $f(x) = \\frac{1}{\\sqrt{x^2 - 4}}$</p>
+                    <p><strong>Domain:</strong> $x^2 - 4 > 0 \\implies x \\in (-\\infty, -2) \\cup (2, \\infty)$.</p>
+                    <p><strong>Range:</strong> $(0, \\infty)$.</p>
+                </div>
+            `
         }
     ]
 };
